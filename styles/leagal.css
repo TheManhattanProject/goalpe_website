@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "arupala_bold_ita";
+    src: url("/assets/fonts/arupala_grotesk_trail/arupala_grotesk_trial_bold_italic.ttf");
+}
+
+@font-face {
+    font-family: "arupala_bold";
+    src: url("/assets/fonts/arupala_grotesk_trail/ArupalaGroteskTrial-Bold.ttf");
+}
+
+@font-face {
+    font-family: "arupala_semi_bold";
+    src: url("/assets/fonts/arupala_grotesk_trail/arupala_grotesk_trial-semibold.ttf");
+}
+
+@font-face {
+    font-family: "arupala_semi_bold_ita";
+    src: url("/assets/fonts/arupala_grotesk_trail/arupala_grotesk_trial_semibold_italic.ttf");
+}
+
+@font-face {
+    font-family: "arupala_medium_ita";
+    src: url("/assets/fonts/arupala_grotesk_trail/ArupalaGroteskTrial-MedIta.ttf");
+}
+@font-face {
+    font-family: "arupala_medium";
+    src: url("/assets/fonts/arupala_grotesk_trail/ArupalaGroteskTrial-Medium.ttf");
+}
+
+@font-face {
+    font-family: "arupala_light";
+    src: url("/assets/fonts/arupala_grotesk_trail/ArupalaGroteskTrial-Light.ttf");
+}
+
+@font-face {
+    font-family: "arupala_super_bold_ita";
+    src: url("/assets/fonts/arupala_grotesk_trail/ArupalaGroteskTrial-SuperBdIt.ttf");
+}
+
+@font-face {
+    font-family: "arupala_ultra";
+    src: url("/assets/fonts/arupala_grotesk_trail/ArupalaGroteskTrial-Ultra.ttf");
+}
+
+@font-face {
+    font-family: "tthoves_semi_bold";
+    src: url("/assets/fonts/tt_hoves/tt_hoves_pro_trial_semibold.ttf");
+}
+
+
+@font-face {
+    font-family: "tthoves_reg";
+    src: url("/assets/fonts/tt_hoves/tt_hoves_pro_trial_regular.ttf");
+}
+
+@font-face {
+    font-family: "tthoves_light";
+    src: url("/assets/fonts/tt_hoves//tt_hoves_pro_trial_light.ttf");
+}
+
+@font-face {
+    font-family: "roboto_reg";
+    src: url("/assets/fonts/roboto/Roboto_Regular.ttf");
+}
+
+body {
+    width: 100dvw;
+    padding: 0;
+    margin: 0;
+    background-color: #0A0A0A;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.bodyMain{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+    margin-top: 72px;
+    width: 90%;
+}
+
+.bodyMain > label{
+    font-family: "arupala_bold_ita";
+    color: #E4F23C;
+    font-size: 32px;
+}
+
+.tabsBar{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 1000px;
+    width: 90%;
+    height: 72px;
+    margin-top: 48px;
+    background-color: #191919;
+     text-decoration: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.tabsBar > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 1000px;
+    font-family: "arupala_semi_bold";
+    font-size: 16px;
+    color: #797979;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+      text-decoration: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mainBody{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #191919;
+    border-radius: 16px;
+    color: #BABABA;
+    margin-top: 40px;
+    padding: 24px 32px;
+}
+
+.mainBody >  p{
+    font-family: "tthoves_light" !important;
+    font-size: 16px;
+    color: #BABABA;
+    margin: 0;
+    margin-top: 24px;
+    padding: 0;
+}
+
+.mainBody > label{
+    font-family: "tthoves_reg";
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+.mainBody span{
+    font-family: "tthoves_semi_bold";
+}
+
+.mainBody ul{
+    list-style-type: disc;
+    font-family: "tthoves_light";
+    font-size: 16px;
+    color: #BABABA;
+    margin-top: 0;
+    padding-left: 20px;
+
+    & > li{
+        margin-top: 20px;
+    }
+}
+
+.mainBody > div{
+    width: 100%;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #2D2D2D;
+
+    & > label{
+        font-family: "arupala_semi_bold_ita";
+        font-size: 24px;
+        color: #E7E8E1;
+    }
+}
+
+@media (max-width: 770px) {
+    .tabsBar{
+      height: 60px;
+      width: 100%;  
+    }
+
+    .tabsBar > div{
+        font-family: "arupala_medium";
+        font-size: 12px;
+        padding: 0 4px;
+    }
+}
+
+@media (max-width: 560px) {
+    .mainBody > div > label{
+        font-size: 20px;
+    }
+
+    .mainBody  ul{
+        font-size: 12px;
+    }
+
+    .mainBody p{
+        font-size: 12px;
+    }
+
+    .mainBody label{
+        font-size: 16px;
+    }
+}

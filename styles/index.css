@@ -69,7 +69,7 @@ body {
 .first-block-layer2 {
     width: 100%;
     align-self: start;
-    justify-self: start;
+    justify-self: center;
     margin-top: 68px;
     z-index: 1;
 }
@@ -97,7 +97,7 @@ body {
     font-size: 44px;
     color: white;
     align-self: flex-start;
-    justify-self: flex-start;
+    justify-self: center;
     height: 760px;
     width: 100%;
     background:

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal</title>
+    <link rel="stylesheet" href="styles/leagal.css" />
+    <link rel="stylesheet" href="styles/nav_bar.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <img alt="index_logo" />
+        <ul>
+            <li>About</li>
+            <li>Whats in the app?</li>
+            <li>Therms & Conditions</li>
+            <li>Blog</li>
+        </ul>
+        <button type="button">Download Now</button>
+        <div onclick="handleOpenSideBar()" class="nav-menu">
+            <div class="nav-menu-item1"></div>
+            <div class="nav-menu-item2"></div>
+            <div class="nav-menu-item3"></div>
+        </div>
+        <div id="navigation-side-bar" class="nav-side-bar">
+            <button type="button" onclick="handleCloseSideBar()">Close</button>
+            <ul>
+                <li>About</li>
+                <li>Whats in the app?</li>
+                <li>Therms & Conditions</li>
+                <li>Blog</li>
+            </ul>
+        </div>
+        <script src="/js/nav_bar.js"></script>
+    </nav>
+
+
+    <main class="bodyMain">
+        <label for="label">Terms & Policies</label>
+        <div id="tabLegalMenu" class="tabsBar">
+            <div
+                onclick="changeState(0)"
+            >Privacy Policy</div>
+            <div
+            onclick="changeState(1)"
+            >Terms & Conditions</div>
+            <div
+            onclick="changeState(2)"
+            >Help & Support</div>
+        </div>
+        <div id="dataBody" class="mainBody">
+           
+        </div>
+
+        <script src="/js/legal.js"></script>
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-header">
+            <div class="footer-header-content">
+                <label for="footerhead">Ready to Play?</label>
+                <p>
+                    Join millions of managers building their dream squads.<br />Draft, manage, and dominate — all from
+                    your
+                    phone.
+                </p>
+            </div>
+            <div class="footer-btns">
+                <button type="button">Download for Android</button>
+                <button type="button">Download for IOS</button>
+            </div>
+        </div>
+        <img src="/assets/images/goal_pe_logo2.png" alt="footerimg">
+
+        <div class="footer-bottom1">
+            <ul>
+                <li>About</li>
+                <li>Terms & Conditions</li>
+                <li>Whats in the app?</li>
+            </ul>
+            <div class="stores">
+                <img src="/assets/images/google_play.png" alt="google-play">
+                <img src="/assets/images/apple_store.png" alt="apple_store">
+            </div>
+            <div class="app-icons1">
+                <label for="forfooter">
+                    Build for fans.<br />Powered by passion.
+                </label>
+                <div>
+                    <img src="/assets/images/insta_icon.png" alt="insta" />
+                    <img src="/assets/images/x_icon.png" alt="x" />
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+            <label for="forfooter">
+                Build for fans.<br />Powered by passion.
+            </label>
+            <ul>
+                <li>About</li>
+                <li>Terms & Conditions</li>
+                <li>Whats in the app?</li>
+            </ul>
+
+            <div class="app-icons">
+                <img src="/assets/images/insta_icon.png" alt="insta" />
+                <img src="/assets/images/x_icon.png" alt="x" />
+            </div>
+
+            <div class="stores">
+                <img src="/assets/images/google_play.png" alt="google-play">
+                <img src="/assets/images/apple_store.png" alt="apple_store">
+            </div>
+        </div>
+
+        <label class="footer-label" for="footer-bottom-label">© 2025 Goalpe – Where every match is yours to win.</label>
+
+    </footer>
+
+</body>
+
+</html>
