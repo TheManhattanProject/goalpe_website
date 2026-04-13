@@ -16,8 +16,7 @@
 footer {
     display: flex;
     flex-direction: column;
-    width: 100dvw;
-    margin-top: 48px;
+    width: 100%;
     box-sizing: border-box;
     
     & > img{
@@ -99,11 +98,12 @@ footer {
         color: #E7E8E1;
     }
 
-    & ul{
+    & ul, & a{
         display: flex;
         font-family: "arupala_semi_bold";
         font-size: 16px;
         color: #929292;
+        text-decoration: none;
         gap: 16px;
         padding: 0;
         list-style: none;
@@ -129,7 +129,7 @@ footer {
         column-gap: 32px;
         align-items: center;
         justify-content: center;
-        opacity: 0.25;
+
         & > img{
             width: 100px;
             height: 30px;
@@ -147,7 +147,7 @@ footer {
     padding-top: 32px;
     margin: 0 16px;
     gap: 55px;
-    & ul {
+    & ul, & a {
         display: flex;
         width: 100%;
         font-family: "arupala_semi_bold";
@@ -158,6 +158,7 @@ footer {
         justify-content: space-between;
         margin: 0;
         padding: 0;
+        text-decoration: none;
     }
 
     & .app-icons1{

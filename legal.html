@@ -13,12 +13,12 @@
 <body>
     <!-- Navigation Bar -->
     <nav>
-        <img alt="index_logo" />
+        <a href="index.html"><img alt="index_logo" /></a>
         <ul>
             <li>About</li>
             <li>Whats in the app?</li>
-            <li>Therms & Conditions</li>
-            <li>Blog</li>
+            <li><a href="legal.html">Terms & Conditions</a></li>
+            <!-- <li>Blog</li> -->
         </ul>
         <button type="button">Download Now</button>
         <div onclick="handleOpenSideBar()" class="nav-menu">
@@ -27,12 +27,11 @@
             <div class="nav-menu-item3"></div>
         </div>
         <div id="navigation-side-bar" class="nav-side-bar">
-            <button type="button" onclick="handleCloseSideBar()">Close</button>
             <ul>
                 <li>About</li>
                 <li>Whats in the app?</li>
-                <li>Therms & Conditions</li>
-                <li>Blog</li>
+                <li><a href="legal.html">Terms & Conditions</a></li>
+                <!-- <li>Blog</li> -->
             </ul>
         </div>
         <script src="/js/nav_bar.js"></script>
@@ -94,7 +93,7 @@
                 </label>
                 <div>
                     <img src="/assets/images/insta_icon.png" alt="insta" />
-                    <img src="/assets/images/x_icon.png" alt="x" />
+                    <a href="https://x.com/GoalPe_x" target="_blank" rel="noopener"><img src="/assets/images/x_icon.png" alt="x" /></a>
                 </div>
             </div>
 
@@ -113,7 +112,7 @@
 
             <div class="app-icons">
                 <img src="/assets/images/insta_icon.png" alt="insta" />
-                <img src="/assets/images/x_icon.png" alt="x" />
+                <a href="https://x.com/GoalPe_x" target="_blank" rel="noopener"><img src="/assets/images/x_icon.png" alt="x" /></a>
             </div>
 
             <div class="stores">
@@ -122,7 +121,8 @@
             </div>
         </div>
 
-        <label class="footer-label" for="footer-bottom-label">© 2025 Goalpe – Where every match is yours to win.</label>
+        <label class="footer-label" for="footer-bottom-label">© <span id="footer-year"></span> Goalpe – Where every match is yours to win.</label>
+        <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 
     </footer>
 

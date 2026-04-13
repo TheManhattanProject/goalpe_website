@@ -39,7 +39,7 @@
 }
 
 body {
-    width: 100dvw;
+    width: 100%;
     padding: 0;
     margin: 0;
     background-color: #0A0A0A;
@@ -296,7 +296,7 @@ body {
     display: flex;
     width: fit-content;
     gap: 34px;
-    animation: scroll-left 20s linear infinite;
+    animation: scroll-left 30s linear infinite;
 
     & .scroll-items {
         display: flex;
@@ -313,7 +313,7 @@ body {
     display: flex;
     width: fit-content;
     gap: 34px;
-    animation: scroll-right 20s linear infinite;
+    animation: scroll-right 30s linear infinite;
 
     & .scroll-items {
 
@@ -429,13 +429,13 @@ body {
 
     & label {
         font-family: "arupala_ultra";
-        font-size: 40px;
+        font-size: clamp(40px, 2.8vw, 100px);
         color: #262626;
     }
 
     & span {
         font-family: "arupala_bold_ita";
-        font-size: 36px;
+        font-size: clamp(36px, 2.6vw, 96px);
         color: #E4F23C;
         margin-top: 70px;
     }
@@ -443,7 +443,7 @@ body {
     & p {
         margin-top: 48px;
         font-family: "arupala_medium_ita";
-        font-size: 20px;
+        font-size: clamp(20px, 1.4vw, 50px);
         color: #E7E8E1
     }
 }
