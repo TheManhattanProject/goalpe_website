@@ -64,13 +64,14 @@
 }
 
 body {
-    width: 100dvw;
+    width: 100%;
     padding: 0;
     margin: 0;
     background-color: #0A0A0A;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .bodyMain{
