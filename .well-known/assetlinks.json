@@ -5,10 +5,10 @@
     ],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.podiumpe.mobilapp.podiumpe_mobileapp",
+      "package_name": "live.goalpe.mobileapp",
       "sha256_cert_fingerprints": [
-        "DE:D8:80:60:BD:FB:FB:3F:5E:CC:1F:1F:F8:E8:1E:02:FE:40:DF:8A:00:3A:AE:6F:5E:AF:43:26:C6:63:92:CF",
-        "28:11:56:43:4E:25:4F:B1:EC:E1:AF:D7:DB:3F:2F:94:FF:FD:AB:FA:5F:39:FD:EA:7C:06:F9:BF:31:C2:B4:3B"
+        "FA:37:95:24:57:81:20:FC:2D:E6:78:D4:C9:E6:41:02:73:72:E0:CC:EB:62:C9:AB:7E:26:BD:20:9A:CF:FC:C2",
+        "57:A1:49:75:E3:14:78:A8:27:A0:BB:0B:33:41:28:86:34:11:88:03:04:09:84:2B:18:9A:00:75:6C:78:1D:FF"
       ]
     }
   }
