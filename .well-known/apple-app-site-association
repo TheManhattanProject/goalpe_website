@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["N89DXY598T.live.goalpe.mobileapp"],
+        "components": [
+          {
+            "/": "/private-league/*",
+            "comment": "Private league join links"
+          }
+        ]
+      }
+    ]
+  }
+}
