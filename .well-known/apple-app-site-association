@@ -6,7 +6,19 @@
         "components": [
           {
             "/": "/private-league/*",
-            "comment": "Private league join links"
+            "comment": "Private league detail / join links"
+          },
+          {
+            "/": "/join/*",
+            "comment": "Join a private league by code (opens the join-code sheet)"
+          },
+          {
+            "/": "/entry/*",
+            "comment": "Fantasy entry detail"
+          },
+          {
+            "/": "/fantasy/*",
+            "comment": "Fantasy game review"
           }
         ]
       }
