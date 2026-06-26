@@ -11,10 +11,29 @@ function openPlayStore() {
     window.open(PLAY_STORE_URL, '_blank', 'noopener,noreferrer');
 }
 
+function getPlatform() {
+    var ua = navigator.userAgent || '';
+    if (/android/i.test(ua)) {
+        return 'android';
+    }
+    if (/iphone|ipad|ipod/i.test(ua)) {
+        return 'ios';
+    }
+    return 'other';
+}
+
+function openStoreForPlatform() {
+    if (getPlatform() === 'android') {
+        openPlayStore();
+        return;
+    }
+    openAppStore();
+}
+
 function initDownloadLinks() {
     document.querySelectorAll('nav button').forEach(function (button) {
         if (button.textContent.trim() === 'Download Now') {
-            button.addEventListener('click', openAppStore);
+            button.addEventListener('click', openStoreForPlatform);
         }
     });
 
