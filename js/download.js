@@ -1,33 +1,14 @@
-const APP_STORE_URL =
-    'https://apps.apple.com/us/app/goalpe-daily-fantasy-football/id6773258294';
-const PLAY_STORE_URL =
-    'https://play.google.com/store/apps/details?id=live.goalpe.mobileapp';
-
+// Store URLs live in /js/store_links.js, which must be loaded before this file.
 function openAppStore() {
-    window.open(APP_STORE_URL, '_blank', 'noopener,noreferrer');
+    window.open(window.GOALPE.APP_STORE_URL, '_blank', 'noopener,noreferrer');
 }
 
 function openPlayStore() {
-    window.open(PLAY_STORE_URL, '_blank', 'noopener,noreferrer');
-}
-
-function getPlatform() {
-    var ua = navigator.userAgent || '';
-    if (/android/i.test(ua)) {
-        return 'android';
-    }
-    if (/iphone|ipad|ipod/i.test(ua)) {
-        return 'ios';
-    }
-    return 'other';
+    window.open(window.GOALPE.PLAY_STORE_URL, '_blank', 'noopener,noreferrer');
 }
 
 function openStoreForPlatform() {
-    if (getPlatform() === 'android') {
-        openPlayStore();
-        return;
-    }
-    openAppStore();
+    window.open(window.GOALPE.getStoreUrl(), '_blank', 'noopener,noreferrer');
 }
 
 function initDownloadLinks() {
