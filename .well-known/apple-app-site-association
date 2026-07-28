@@ -23,5 +23,8 @@
         ]
       }
     ]
+  },
+  "webcredentials": {
+    "apps": ["N89DXY598T.live.goalpe.mobileapp"]
   }
 }
