@@ -1,0 +1,405 @@
+/* Fonts (subset used by the campaign page) */
+@font-face {
+    font-family: "arupala_ultra";
+    src: url("/assets/fonts/arupala_grotesk_trail/ArupalaGroteskTrial-Ultra.ttf");
+}
+
+@font-face {
+    font-family: "arupala_semibold";
+    src: url("/assets/fonts/arupala_grotesk_trail/arupala_grotesk_trial-semibold.ttf");
+}
+
+@font-face {
+    font-family: "hoves_reg";
+    src: url("/assets/fonts/tt_hoves/tt_hoves_pro_trial_regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    background-color: #0A0A0A;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+ * Desktop sizes are expressed in vh so the whole hero scales with viewport
+ * height. At ~832px inner height (the Figma frame) every value equals its
+ * Figma px; on a MacBook Pro 16" it scales up, on an Air it stays Figma-exact.
+ * clamp() keeps a floor/ceiling so it never gets too small or too large.
+ */
+
+/* ---------- Background app-icon watermark (Figma: bottom-right, rotated 7.17deg) ---------- */
+.bg-icon {
+    position: fixed;
+    z-index: 0;
+    pointer-events: none;
+    left: 78.9%;
+    top: 82.8%;
+    width: clamp(460px, 86.8vh, 880px);
+    height: auto;
+    transform: translate(-50%, -50%) rotate(7.17deg);
+    opacity: 0.06;
+    user-select: none;
+}
+
+/* ---------- Navigation ---------- */
+.camp-nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* vertical scales with height; horizontal insets match Figma (8.9% / 5.5%) */
+    padding: clamp(18px, 3.37vh, 40px) clamp(20px, 5.5vw, 96px) clamp(10px, 1.68vh, 22px) clamp(24px, 8.9vw, 150px);
+    background-color: #0A0A0A;
+}
+
+.camp-logo {
+    display: flex;
+    align-items: center;
+}
+
+.camp-logo img {
+    height: clamp(18px, 2.64vh, 30px);
+    width: auto;
+    display: block;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    width: 24px;
+    align-items: center;
+    justify-content: center;
+    row-gap: 6px;
+    cursor: pointer;
+    position: relative;
+    z-index: 10001;
+}
+
+.nav-menu-item1,
+.nav-menu-item2,
+.nav-menu-item3 {
+    height: 2px;
+    width: 22px;
+    background-color: #F9F9F9;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-menu.active .nav-menu-item1 {
+    transform: rotate(45deg) translate(6px, 6px);
+    background-color: #E4F23C;
+}
+
+.nav-menu.active .nav-menu-item2 {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.nav-menu.active .nav-menu-item3 {
+    transform: rotate(-45deg) translate(6px, -6px);
+    background-color: #E4F23C;
+}
+
+.nav-side-bar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    background-color: #191919;
+    height: 100%;
+    width: 100%;
+    max-width: 360px;
+    margin: 0;
+    padding: 88px 32px 32px 32px;
+    box-sizing: border-box;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-side-bar ul {
+    display: flex;
+    flex-direction: column;
+    font-family: "arupala_semibold";
+    color: #E4F23C;
+    font-size: 18px;
+    list-style: none;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-side-bar li {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(228, 242, 60, 0.2);
+    cursor: pointer;
+    transition: padding-left 0.3s ease;
+}
+
+.nav-side-bar li:hover {
+    padding-left: 8px;
+}
+
+.nav-side-bar a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ---------- Main layout ---------- */
+.camp-main {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0 0 clamp(16px, 2.9vh, 32px);
+    box-sizing: border-box;
+}
+
+.camp-layout {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    /* Card + promo centred as a group: balanced margins on wide screens, and
+       on a 1280 viewport the card lands at ~144px, matching Figma. */
+    padding: 0 24px;
+    gap: clamp(20px, 3.37vh, 48px);
+    min-height: 0;
+}
+
+/* ---------- Campaign card (exact design image, scales with height) ---------- */
+.camp-card-wrap {
+    display: flex;
+    align-items: center;
+    gap: clamp(11px, 1.8vh, 22px);
+    flex-shrink: 0;
+}
+
+.camp-card {
+    display: block;
+    transition: transform 0.25s ease;
+}
+
+.camp-card img {
+    display: block;
+    width: auto;
+    height: clamp(500px, 72.7vh, 800px);
+    max-width: 46vw;
+    filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5));
+}
+
+.camp-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Carousel indicator (Figma: vertical, just right of the card) */
+.carousel-dots {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.carousel-dots span {
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 99px;
+    background-color: rgba(255, 255, 255, 0.28);
+    transition: all 0.3s ease;
+}
+
+.carousel-dots span.active {
+    background-color: #F9F9F9;
+    height: 18px;
+}
+
+/* ---------- Get the app ---------- */
+.camp-promo {
+    flex-shrink: 0;
+    width: clamp(340px, 47.7vh, 540px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* Figma: title starts ~14% of the card height below the card top */
+    padding-top: clamp(60px, 10.46vh, 124px);
+}
+
+.promo-head-desktop {
+    font-family: "arupala_ultra";
+    font-size: clamp(26px, 4.16vh, 48px);
+    line-height: 1.08;
+    letter-spacing: 0.07em;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.promo-head-mobile {
+    display: none;
+}
+
+.promo-sub {
+    font-family: "hoves_reg";
+    font-size: clamp(14px, 1.92vh, 22px);
+    line-height: 1.5;
+    color: #7F7F7F;
+    width: clamp(300px, 45.4vh, 520px);
+    max-width: 100%;
+    margin: clamp(20px, 3.6vh, 42px) 0 0;
+}
+
+.store-btns {
+    display: flex;
+    gap: clamp(12px, 1.9vh, 22px);
+    margin-top: clamp(70px, 14.18vh, 175px);
+}
+
+.store-btn {
+    display: block;
+    line-height: 0;
+}
+
+.store-btn img {
+    height: clamp(46px, 6.49vh, 74px);
+    width: auto;
+    display: block;
+}
+
+/* ---------- Responsive: stack + mobile chrome (height-proportional) ---------- */
+@media (max-width: 1000px) {
+    body {
+        height: auto;
+        min-height: 100dvh;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .camp-nav {
+        padding: clamp(12px, 1.8dvh, 20px) 20px;
+    }
+
+    .camp-logo img {
+        height: clamp(15px, 2dvh, 20px);
+    }
+
+    /* Figma mobile has no background watermark */
+    .bg-icon {
+        display: none;
+    }
+
+    /* Fill the phone height: content is distributed, not top-stacked */
+    .camp-main {
+        flex: 1;
+        justify-content: center;
+        padding: clamp(10px, 2dvh, 24px) 20px clamp(14px, 3dvh, 32px);
+    }
+
+    .camp-layout {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(14px, 2.6dvh, 34px);
+        padding: 0;
+        width: 100%;
+    }
+
+    .camp-card-wrap {
+        flex-direction: column;
+        gap: clamp(10px, 1.6dvh, 18px);
+        width: 100%;
+        align-items: center;
+    }
+
+    .camp-card {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .camp-card img {
+        height: auto;
+        width: min(410px, 92vw);
+        /* jersey scales with viewport height: large on tall phones, safe on short ones */
+        max-height: clamp(340px, 62dvh, 620px);
+    }
+
+    .carousel-dots {
+        flex-direction: row;
+    }
+
+    .carousel-dots span.active {
+        height: 7px;
+        width: 18px;
+    }
+
+    .camp-promo {
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
+        padding-top: 0;
+    }
+
+    .promo-head-desktop,
+    .promo-sub {
+        display: none;
+    }
+
+    .promo-head-mobile {
+        display: block;
+        font-family: "arupala_ultra";
+        font-size: clamp(18px, 2.6dvh, 24px);
+        letter-spacing: 1px;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0;
+    }
+
+    .store-btns {
+        justify-content: center;
+        margin-top: clamp(12px, 2dvh, 24px);
+    }
+
+    .store-btn img {
+        height: clamp(42px, 5.6dvh, 54px);
+    }
+}
+
+@media (max-width: 560px) {
+    .nav-side-bar {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .camp-nav {
+        padding: 14px 16px;
+    }
+}

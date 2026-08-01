@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoalPe · EPL Jersey Giveaway</title>
+    <meta name="description"
+        content="Make a fantasy entry in any EPL game week contest on GoalPe to enter the lucky draw for an EPL edition jersey. Free entry · Aug 21 – Sep 20.">
+    <link rel="icon" type="image/png" href="/assets/images/goalpe-favicon.png">
+    <link rel="stylesheet" href="/styles/campaign.css" />
+</head>
+
+<body>
+    <!-- Faint GoalPe app-icon watermark in the background -->
+    <img class="bg-icon" src="/assets/images/goalpe-favicon.png" alt="" aria-hidden="true" />
+
+    <!-- Navigation Bar -->
+    <nav class="camp-nav">
+        <a href="/index.html" class="camp-logo">
+            <img src="/assets/images/goalpe_logo_white_c.png" alt="GoalPe" />
+        </a>
+        <div onclick="handleOpenSideBar()" class="nav-menu" aria-label="Menu" role="button" tabindex="0">
+            <div class="nav-menu-item1"></div>
+            <div class="nav-menu-item2"></div>
+            <div class="nav-menu-item3"></div>
+        </div>
+        <div id="navigation-side-bar" class="nav-side-bar">
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/legal.html">Terms &amp; Conditions</a></li>
+            </ul>
+        </div>
+        <script src="/js/nav_bar.js"></script>
+    </nav>
+
+    <main class="camp-main">
+        <div class="camp-layout">
+
+            <!-- Campaign card (exact design graphic; the whole card is the Play Now CTA) -->
+            <div class="camp-card-wrap">
+                <a href="#" id="play-now" class="camp-card"
+                    aria-label="Play Now — enter the EPL Edition Jersey Giveaway">
+                    <img src="/assets/images/campaign_card.png"
+                        alt="EPL Edition Jersey Giveaway, Aug 21 to Sep 20. Free entry. Make a fantasy entry in any one of the EPL game week contests to participate in the lucky draw. India residents, 18+. One base entry per person. T&Cs apply." />
+                </a>
+                <div class="carousel-dots" aria-hidden="true">
+                    <span></span>
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <!-- Get the app -->
+            <section class="camp-promo">
+                <h1 class="promo-head-desktop">GET THE GOALPE APP NOW !</h1>
+                <h1 class="promo-head-mobile">GET THE APP</h1>
+                <p class="promo-sub">Join fantasy contests, track live points, and win real prizes - all faster and
+                    smoother on the app. Get instant match alerts so you never miss a lineup deadline.</p>
+                <div class="store-btns">
+                    <a class="store-btn" href="#" data-store="ios" aria-label="Download on the App Store">
+                        <img src="/assets/images/appstore_button.png" alt="Download on the App Store" />
+                    </a>
+                    <a class="store-btn" href="#" data-store="android" aria-label="Get it on Google Play">
+                        <img src="/assets/images/googleplay_button.png" alt="Get it on Google Play" />
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="/js/store_links.js"></script>
+    <script src="/js/campaign.js"></script>
+</body>
+
+</html>
