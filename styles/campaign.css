@@ -319,11 +319,13 @@ body {
         display: none;
     }
 
-    /* Top-anchored flow matching Figma mobile (frame 390x844) */
+    /* Top-anchored flow matching Figma mobile (frame 390x844).
+       Bottom padding is a constant so the copyright keeps a fixed offset
+       from the bottom edge on every device. */
     .camp-main {
         flex: 1;
         justify-content: flex-start;
-        padding: clamp(12px, 1.9dvh, 20px) 20px clamp(14px, 2.5dvh, 28px);
+        padding: clamp(12px, 1.9dvh, 20px) 20px 16px;
     }
 
     .camp-layout {
@@ -343,8 +345,9 @@ body {
         color: #818181;
         text-align: center;
         width: 100%;
-        /* Figma: buttons -> copyright ~= 65px; flows below the buttons, not pinned */
-        margin-top: clamp(28px, 7.7dvh, 72px);
+        /* pinned to the bottom (auto top); reset the default <p> margins so the
+           only gap below is main's constant padding-bottom */
+        margin: auto 0 0;
     }
 
     .camp-card-wrap {
@@ -362,9 +365,9 @@ body {
     }
 
     .camp-card img {
-        /* height-DRIVEN so the jersey scales directly with the phone's height;
-           61dvh matches Figma's card (514/844) and keeps everything on one screen */
-        height: clamp(340px, 61dvh, 600px);
+        /* height-DRIVEN so the jersey scales directly with the phone's height
+           (Figma card is 61dvh; +10% per request = 67dvh) */
+        height: clamp(374px, 67dvh, 660px);
         width: auto;
         max-width: 94vw;
     }
