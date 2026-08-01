@@ -292,6 +292,11 @@ body {
     display: block;
 }
 
+/* Copyright: mobile only (Figma desktop has none) */
+.camp-copyright {
+    display: none;
+}
+
 /* ---------- Responsive: stack + mobile chrome (height-proportional) ---------- */
 @media (max-width: 1000px) {
     body {
@@ -328,6 +333,18 @@ body {
         gap: clamp(14px, 2.6dvh, 34px);
         padding: 0;
         width: 100%;
+        /* fills the space so the copyright is pushed to the bottom */
+        flex: 1;
+    }
+
+    .camp-copyright {
+        display: block;
+        font-family: "hoves_reg";
+        font-size: 12px;
+        color: #818181;
+        text-align: center;
+        width: 100%;
+        padding-top: clamp(10px, 2dvh, 18px);
     }
 
     .camp-card-wrap {
