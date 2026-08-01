@@ -344,10 +344,11 @@ body {
     }
 
     .camp-card img {
-        height: auto;
-        width: min(410px, 92vw);
-        /* jersey scales with viewport height: large on tall phones, safe on short ones */
-        max-height: clamp(340px, 62dvh, 620px);
+        /* height-DRIVEN so the jersey scales directly with the phone's height;
+           width follows aspect and only caps to avoid overflow on narrow phones */
+        height: clamp(360px, 64dvh, 640px);
+        width: auto;
+        max-width: 94vw;
     }
 
     .carousel-dots {
