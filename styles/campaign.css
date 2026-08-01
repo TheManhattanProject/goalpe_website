@@ -319,22 +319,21 @@ body {
         display: none;
     }
 
-    /* Fill the phone height: content is distributed, not top-stacked */
+    /* Top-anchored flow matching Figma mobile (frame 390x844) */
     .camp-main {
         flex: 1;
-        justify-content: center;
-        padding: clamp(10px, 2dvh, 24px) 20px clamp(14px, 3dvh, 32px);
+        justify-content: flex-start;
+        padding: clamp(12px, 1.9dvh, 20px) 20px clamp(14px, 2.5dvh, 28px);
     }
 
     .camp-layout {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: clamp(14px, 2.6dvh, 34px);
+        justify-content: flex-start;
+        /* Figma: dots -> "GET THE APP" ~= 36px */
+        gap: clamp(24px, 4.3dvh, 44px);
         padding: 0;
         width: 100%;
-        /* fills the space so the copyright is pushed to the bottom */
-        flex: 1;
     }
 
     .camp-copyright {
@@ -344,12 +343,14 @@ body {
         color: #818181;
         text-align: center;
         width: 100%;
-        padding-top: clamp(10px, 2dvh, 18px);
+        /* Figma: buttons -> copyright ~= 65px; flows below the buttons, not pinned */
+        margin-top: clamp(28px, 7.7dvh, 72px);
     }
 
     .camp-card-wrap {
         flex-direction: column;
-        gap: clamp(10px, 1.6dvh, 18px);
+        /* Figma: jersey -> dots ~= 9px */
+        gap: clamp(8px, 1.1dvh, 14px);
         width: 100%;
         align-items: center;
     }
@@ -362,8 +363,8 @@ body {
 
     .camp-card img {
         /* height-DRIVEN so the jersey scales directly with the phone's height;
-           width follows aspect and only caps to avoid overflow on narrow phones */
-        height: clamp(360px, 64dvh, 640px);
+           61dvh matches Figma's card (514/844) and keeps everything on one screen */
+        height: clamp(340px, 61dvh, 600px);
         width: auto;
         max-width: 94vw;
     }
@@ -392,7 +393,8 @@ body {
     .promo-head-mobile {
         display: block;
         font-family: "arupala_ultra";
-        font-size: clamp(18px, 2.6dvh, 24px);
+        /* Figma mobile: "GET THE APP" is ~15px */
+        font-size: clamp(13px, 1.77dvh, 17px);
         letter-spacing: 1px;
         color: #ffffff;
         text-transform: uppercase;
@@ -402,7 +404,8 @@ body {
 
     .store-btns {
         justify-content: center;
-        margin-top: clamp(12px, 2dvh, 24px);
+        /* Figma: "GET THE APP" -> buttons ~= 14px */
+        margin-top: clamp(10px, 1.7dvh, 16px);
     }
 
     .store-btn img {
