@@ -49,6 +49,11 @@
     <script src="/js/store_links.js"></script>
     <script>
         (function () {
+            // Leave preview crawlers on the page so they read the og: tags above
+            // instead of being bounced to the store and reporting Apple's card.
+            if (window.GOALPE.isCrawler()) {
+                return;
+            }
             // replace() keeps this page out of history, so Back returns to
             // wherever the user came from instead of re-triggering the redirect.
             window.location.replace(window.GOALPE.getStoreUrl());
